@@ -1,7 +1,33 @@
 * {
     box-sizing: border-box;
 }
+
 body {
     background-color: lightgray;
     font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+
+/* header styling */
+header {
+    display: flex;
+}
+
+.headerTitle {
+    width: 200px;
+}
+
+.quizScore {
+    align-items: flex-end;
+}
+
+.quizStart {
+    width: 640px;
+}
+/* buttons */
+button {
+    width: 50%;
+    border: none;
+    text-align: center;
+}
+

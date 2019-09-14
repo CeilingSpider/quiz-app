@@ -13,17 +13,22 @@ header {
     display: flex;
 }
 
-.headerTitle {
+/*.headerTitle {
     width: 200px;
-}
+}*/
 
 .quizScore {
     align-items: flex-end;
 }
 
+.headerTitle, .quizScore {
+    display: inline-block;
+}
+
 .quizStart {
     width: 640px;
 }
+
 /* buttons */
 button {
     width: 50%;

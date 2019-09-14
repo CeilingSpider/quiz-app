@@ -1,21 +1,18 @@
 * {
     box-sizing: border-box;
+    margin: auto;
 }
 
 body {
-    background-color: lightgray;
-    font-size: 20px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 /* header styling */
 header {
     display: flex;
+    height: 100px;
 }
 
-/*.headerTitle {
-    width: 200px;
-}*/
 
 .quizScore {
     align-items: flex-end;
@@ -25,14 +22,21 @@ header {
     display: inline-block;
 }
 
+/*things concerning that "main" part*/
 .quizStart {
+    height:640px;
     width: 640px;
+}
+
+.introImage {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* buttons */
 button {
-    width: 50%;
+    width: 100%;
     border: none;
-    text-align: center;
 } 
 

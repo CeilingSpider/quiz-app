@@ -4,16 +4,14 @@
 }
 
 body {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    text-transform: uppercase;
+    font-family: 'Days One', Verdana, sans-serif;
+    background-image: url('https://i.imgur.com/rX81rT7.jpg');
+    background-repeat: repeat;
 }
-
 
 .container {
     text-align: center;
-    width: 75%;
-    height: 640px;
-    margin-top: 10rem;
+    padding-top: 7rem;
 }
 
 
@@ -22,32 +20,41 @@ header {
     position: fixed;
     top: 0; 
     display: flex;
-    height: 15%;
+    height: 10%;
     width: 100%;
-    background-color: dimgray;
+    background-color: #2D3D14;
     text-align: center;
+    text-transform: uppercase;
     
 }
 
-h1, h2, h3, h4, p {
+h1, h2, h3, h4 {
+    font-family: 'Days One', Verdana, sans-serif;
     text-align: center;
     padding: 10px;
 }
 
+p {
+    font-family: 'Days One', Verdana, sans-serif;
+}
 .quizProgress {
     list-style: none;
     color: white;
 }
 
 /*things concerning that "main" part*/
-.quizStart, .questionAnswerForm, .correctFeedback, .results {
-    display: inline-block;
+
+.questionAnswerForm {
+    display: none;
+}
+.quizStart, .questionAnswerForm, .correctFeedback, .wrongFeedback, .results {
     width: 100%;
-    background-color: lightgrey;
+    background-color: #B2D67D;
+    color: #2D3D14;
 }
 
 .answerItem {
-    background-color: gray;
+    background-color: #648A2C;
     color: white;
     width: 100%;
 }
@@ -62,8 +69,12 @@ form ul {
 }
 
 form input {
-    visibility: hidden;
-    text-align: center;
+    visibility: 
+}
+
+.answerItem:hover, .answerItem:active {
+    background-color: #2D3D14;
+    cursor: pointer;
 }
 
 form, label {
@@ -103,10 +114,12 @@ button {
     margin-left: auto;
     margin-right: auto;
     width: 100%;
-    height: 3rem;
+    height: 3.5rem;
     border: none;
-    font-family: sans-serif;
+    font-family: 'Days One', Verdana, sans-serif;
     text-transform: uppercase;
+    background-color: #42591C;
+    color: white;
 } 
 
 

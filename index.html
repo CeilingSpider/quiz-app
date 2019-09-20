@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
         <head>
-                <meta charset="utf-8">
-                <meta http-equiv="X-UA-Compatible" content="IE=edge">
-                <title>Parks and Recreation: The Quiz</title>
-                <meta name="description" content="Test your knowledge - Lil' Sebastian believes in you!">
-                <meta name="viewport" content="width=device-width, initial-scale=1">
-                <link rel="stylesheet" href="main.css" type="text/css">
-                <link href="https://fonts.googleapis.com/css?family=Days+One&display=swap" rel="stylesheet">
-            </head>
+            <meta charset="utf-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <title>Parks and Recreation: The Quiz</title>
+            <meta name="description" content="Test your knowledge - Lil' Sebastian believes in you!">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+            <script type="text/javascript" src="index.js"></script>
+            <script type="text/javascript" src="data.js"></script>
+            <link rel="stylesheet" href="main.css" type="text/css">
+            <link href="https://fonts.googleapis.com/css?family=Days+One&display=swap" rel="stylesheet">
+        </head>
 <body>
     <header>
         <div>
@@ -22,74 +25,11 @@
         <div class="container">
 
             <div class="quizStart">
-                <h3>Think you're a true Pawneean? Find out!</h3>
+                <h3>Test your knowledge of Parks and Recreation</h3>
                 <img class="introImage" src="https://i.imgur.com/Bb0wIyNm.jpg?1" alt="Jerry looking worried or scared, or both">
                 <button class="buttonStart">Begin!</button>
             </div>
-            <!--
-                These are the other divs that will be seen as you click through the quiz. 
-                **************Question answer form HTML**************
-            -->
-
-            <div class="questionAnswerForm"> 
-                <h4>This is where the text for each question will go</h4>
-                    <form>
-                        <fieldset>
-                            <ul>
-                                <li class= "answerItem">
-                                    <label class="answerOption">
-                                    <input type="radio" value="value" name="answer" required>
-                                    <span>answer option</span>
-                                    </label>
-                                </li>
-                                <li class= "answerItem">
-                                    <label class="answerOption">
-                                    <input type="radio" value="value" name="answer" required>
-                                    <span>answer option</span>
-                                    </label>
-                                </li>
-                                <li class= "answerItem">
-                                    <label class="answerOption">
-                                    <input type="radio" value="value" name="answer" required>
-                                    <span>answer option</span>
-                                    </label>
-                                </li>
-                                <li class= "answerItem">
-                                    <label class="answerOption">
-                                    <input type="radio" value="value" name="answer" required>
-                                    <span>answer option</span>
-                                    </label>
-                                </li>
-                            </ul>
-                        <button type="submit" class="buttonSubmit">Submit</button>
-                        </fieldset>
-                    </form>
-            </div>
-
-        <!-- ****** feedback between questions ******** -->
-
-            <div class="correctFeedback">
-                <h2>You got it wrong!</h2>
-                <img class="feedbackImg" src="https://i.imgur.com/Yp0oEHt.jpg" alt="an unhappy Ron Swanson">
-                <p>The correct answer is _____!</p>
-                <button class="buttonNext">Next</button>
-            </div>
-
-            <div class="correctFeedback">
-                <h2>You got it right!</h2>
-                <img class="feedbackImg" src="https://i.imgur.com/3aHDcXG.jpg" alt="text">
-                <p>You are literally the best!</p>
-                <button class="buttonNext">Next</button>
-            </div>
-
-
-    <!-- ******* end of quiz score/feedback ******** -->
-            <div class="results">
-                <h2>Aw, jeez...</h2>
-                <img class="resultsImg" src="https://i.imgur.com/bLPJTPt.jpg">
-                <p>You scored 3/10! Dammit, Jerry!</p>
-                <button class="buttonReload">Restart quiz</button>
-            </div>
+            <div class="questionAnswerForm"> </div>
 
         </div>
     </main>

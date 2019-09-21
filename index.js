@@ -127,14 +127,15 @@ function updateScore () {
 // dependent on score (3 possible screens)
 function renderResults () {
     if (score >= 8) {
-      $('.questionAnswerForm').html(`<div class="results correctFeedback"><h2>Good work, I'm proud of you.</h2>
-      <img src="https://i.imgur.com/K1yKaSl.jpg" alt="Ron Swanson, holding a saw"/><p>You got ${score} / 10</p><p>"Never half ass two things. Whole ass one thing."</p>
+      $('.questionAnswerForm').html(`<div class="feedback"><h2>Good work, I'm proud of you.</h2>
+      <img class="resultsImg" src="https://i.imgur.com/K1yKaSl.jpg" alt="Ron Swanson, holding a saw"/><p>You got ${score} / 10</p><p>"Never half ass two things. Whole ass one thing."</p>
       <button class="buttonReload">Restart Quiz</button></div>`);
     } else if (score < 8 && score >= 4) {
-      $('.questionAnswerForm').html(`<div class="results correctFeedback"><h2>Almost there!</h2>
-      <img src="https://i.imgur.com/knBRsyK.jpg" alt="Ben Wyatt holding a Cone of Dunshire"/><p>You got ${score} / 10</p><p>"Are the cones a metaphor? Well, yes and no."</p><button class="buttonReload">Restart Quiz</button></div>`);
+      $('.questionAnswerForm').html(`<div class="feedback"><h2>Almost there!</h2>
+      <img class="resultsImg" src="https://i.imgur.com/knBRsyK.jpg" alt="Ben Wyatt holding a Cone of Dunshire"/><p>You got ${score} / 10</p><p>"Are the cones a metaphor? Well, yes and no."</p><button class="buttonReload">Restart Quiz</button></div>`);
     } else {
-      $('.questionAnswerForm').html(`<div class="results correctFeedback"><h2>Dammit, Jerry!</h2><img src="https://i.imgur.com/bLPJTPt.jpg" alt="Jerry, holding a phone and looking scared"/><p>You got ${score} / 10</p><p>"Aw, Jeez..."</p><button class="buttonReload">Restart Quiz</button></div>`);
+      $('.questionAnswerForm').html(`<div class="feedback"><h2>Dammit, Jerry!</h2>
+      <img class="resultsImg" src="https://i.imgur.com/bLPJTPt.jpg" alt="Jerry, holding a phone and looking scared"/><p>You got ${score} / 10</p><p>"Aw, Jeez..."</p><button class="buttonReload">Restart Quiz</button></div>`);
     }
   } 
 

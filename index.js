@@ -7,35 +7,35 @@ function generateQuestion() {
         return `<div class="question-${questionNumber}">
         <p>${STORE[questionNumber].question}</p>
         <form>
-        <fieldset>
-        <ul>
-          <li class= "answerItem">
-            <label class="answerOption">
-            <input type="radio" value="${STORE[questionNumber].answers[0]}" name="answer" required>
-            <span>${STORE[questionNumber].answers[0]}</span>
-            </label>
-          </li>
-          <li class= "answerItem">
-            <label class="answerOption">
-            <input type="radio" value="${STORE[questionNumber].answers[1]}" name="answer" required>
-            <span>${STORE[questionNumber].answers[1]}</span>
-            </label>
-          </li>
-          <li class= "answerItem">
-            <label class="answerOption">
-            <input type="radio" value="${STORE[questionNumber].answers[2]}" name="answer" required>
-            <span>${STORE[questionNumber].answers[2]}</span>
-            </label>
-          </li>
-          <li class= "answerItem">
-            <label class="answerOption">
-            <input type="radio" value="${STORE[questionNumber].answers[3]}" name="answer" required>
-            <span>${STORE[questionNumber].answers[3]}</span>
-            </label>
-          </li>
-        </ul>
-        <button type="submit" class="buttonSubmit">Submit</button>
-        </fieldset>
+            <fieldset>
+                <ul>
+                <li class= "answerItem">
+                    <label class="answerOption">
+                    <input type="radio" value="${STORE[questionNumber].answers[0]}" name="answer" required>
+                    <span>${STORE[questionNumber].answers[0]}</span>
+                    </label>
+                </li>
+                <li class= "answerItem">
+                    <label class="answerOption">
+                    <input type="radio" value="${STORE[questionNumber].answers[1]}" name="answer" required>
+                    <span>${STORE[questionNumber].answers[1]}</span>
+                    </label>
+                </li>
+                <li class= "answerItem">
+                    <label class="answerOption">
+                    <input type="radio" value="${STORE[questionNumber].answers[2]}" name="answer" required>
+                    <span>${STORE[questionNumber].answers[2]}</span>
+                    </label>
+                </li>
+                <li class= "answerItem">
+                    <label class="answerOption">
+                    <input type="radio" value="${STORE[questionNumber].answers[3]}" name="answer" required>
+                    <span>${STORE[questionNumber].answers[3]}</span>
+                    </label>
+                </li>
+                </ul>
+            <button type="submit" class="buttonSubmit">Submit</button>
+            </fieldset>
         </form>
         </div>`;
     } else {
@@ -107,7 +107,7 @@ function ifAnswerCorrect () {
 function userAnswerFeedbackCorrect () {
     let correctAnswer = `${STORE[questionNumber].correctAnswer}`;
     $('.questionAnswerForm').html(`<div class="correctFeedback"><img class="feedbackImg" src="https://i.imgur.com/3aHDcXG.jpg" alt="Chris Trager giving you a thumbs up"/>
-    <h2>You got it right!</h2><button type=button class="buttonNext">Next</button></div>`);
+    <h2>You are correct!</h2><button type=button class="buttonNext">Next</button></div>`);
   }
 
 //if answer is wrong response
@@ -115,7 +115,7 @@ function userAnswerFeedbackWrong () {
     let correctAnswer = `${STORE[questionNumber].correctAnswer}`;
     $('.questionAnswerForm').html(`<div class="wrongFeedback"><h2>You got it wrong!</h2>
     <img class="feedbackImg" src="https://i.imgur.com/Yp0oEHt.jpg" alt="an angry April Ludgate snarling at you"/>
-    <p>The correct answer is <span>"${correctAnswer}"</span>!</p><button type="submit" button class="buttonNext">Next</button></div>`);
+    <p>The correct answer is <span>"${correctAnswer}"</span></p><button type="submit" button class="buttonNext">Next</button></div>`);
   }
 
 //update score progress
@@ -123,19 +123,21 @@ function updateScore () {
     changeScore();
     $('.score').text(score);
   }
+
+
 //after answering all questions, display HTML for end of quiz results
 // dependent on score (3 possible screens)
 function renderResults () {
     if (score >= 8) {
       $('.questionAnswerForm').html(`<div class="feedback"><h2>Good work, I'm proud of you.</h2>
-      <img class="resultsImg" src="https://i.imgur.com/K1yKaSl.jpg" alt="Ron Swanson, holding a saw"/><p>You got ${score} / 10</p><p>"Never half ass two things. Whole ass one thing."</p>
+      <img class="resultsImg" src="https://i.imgur.com/K1yKaSl.jpg" alt="Ron Swanson, holding a saw"/><h3>You got ${score} / 10</h3><p>"Never half ass two things. Whole ass one thing."</p>
       <button class="buttonReload">Restart Quiz</button></div>`);
     } else if (score < 8 && score >= 4) {
       $('.questionAnswerForm').html(`<div class="feedback"><h2>Almost there!</h2>
-      <img class="resultsImg" src="https://i.imgur.com/knBRsyK.jpg" alt="Ben Wyatt holding a Cone of Dunshire"/><p>You got ${score} / 10</p><p>"Are the cones a metaphor? Well, yes and no."</p><button class="buttonReload">Restart Quiz</button></div>`);
+      <img class="resultsImg" src="https://i.imgur.com/knBRsyK.jpg" alt="Ben Wyatt holding a Cone of Dunshire"/><h3>You got ${score} / 10</h3><p>"Are the cones a metaphor? Well, yes and no."</p><button class="buttonReload">Restart Quiz</button></div>`);
     } else {
       $('.questionAnswerForm').html(`<div class="feedback"><h2>Dammit, Jerry!</h2>
-      <img class="resultsImg" src="https://i.imgur.com/bLPJTPt.jpg" alt="Jerry, holding a phone and looking scared"/><p>You got ${score} / 10</p><p>"Aw, Jeez..."</p><button class="buttonReload">Restart Quiz</button></div>`);
+      <img class="resultsImg" src="https://i.imgur.com/bLPJTPt.jpg" alt="Jerry, holding a phone and looking scared"/><h3>You got ${score} / 10</h3><p>"Aw, Jeez..."</p><button class="buttonReload">Restart Quiz</button></div>`);
     }
   } 
 

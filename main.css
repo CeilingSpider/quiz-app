@@ -98,11 +98,6 @@ form ul {
     width: 0;
 }
 
-/*.answerObject:hover, .answerObject:checked {
-    background-color: #648A2C;
-    color: white;
-    cursor: pointer;
-}*/
 
 input[type="radio"] {
     margin-right: 0;

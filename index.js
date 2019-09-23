@@ -150,7 +150,7 @@ function renderNextQuestion () {
       userSelectAnswer();
     });
   }
-//reload quiz and start over
+//reload quiz and start over, shows at end of quiz
 function restartQuiz () {
     $('main').on('click', '.buttonReload', function (event) {
       location.reload();
